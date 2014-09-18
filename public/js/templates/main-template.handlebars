@@ -1,0 +1,10 @@
+"<div ng-repeat='project in projects'>
+  <div id='overlay'>
+    <h1>{{project.name}}</h1>
+    <h5>{{project.blurb}}</h5>
+    <h5>Technologies</h5>
+    <ul><li ng-repeat='tech in project.technologies'>{{tech}}</li></ul>
+    <ul><li ng-repeat='link in project.links'>{{link}}</li></ul>
+  </div>
+  <div id='background'></div>
+</div>"

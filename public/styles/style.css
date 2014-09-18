@@ -1,0 +1,131 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,400);
+@import url(http://fonts.googleapis.com/css?family=Nixie+One|Oldenburg|Cutive);
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: Nixie One;
+}
+header {
+  width: 100%;
+  height: 60px;
+  text-align: left;
+  color: dimgrey;
+  padding-top: 10px;
+}
+ul {
+  list-style-type: none;
+}
+nav a {
+  text-decoration: none;
+  z-index: 3;
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 30px;
+  text-align: center;
+  color:dimgrey;
+}
+nav a:visited {
+  color: dimgrey;
+}
+.nav1:hover { 
+  color: mediumturquoise;
+}
+.nav2:hover { 
+  color: lightcoral;
+}
+.nav3:hover { 
+  color: cornflowerblue;
+}
+#content {
+  margin-left: 0px;
+  position:absolute;
+  width: 100%;
+  top:40px;
+  bottom:30px;
+  overflow: scroll;  
+}
+
+.home {
+  background: url('../images/subtle_zebra_3d.png');
+}
+
+.main {
+  margin-left: 35px;
+}
+
+.main p {
+  font-family: Nixie One;
+  font-weight: 300;
+  font-size: 150px;
+  word-wrap: break-word;
+  width:100%;
+  height: 33%;
+  margin:0;
+  letter-spacing: -2px;
+}
+.firstName {
+  color: dimgray;
+}
+
+.firstName .mck{
+  color: mediumturquoise;
+}
+.lastName {
+  color: lightcoral;
+}
+.suffix {
+  color: cornflowerblue;
+}   
+
+footer {
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+  line-height: 32px;
+  position: fixed;
+  bottom:0;
+  background: dimgray;
+  color: mediumturquoise;
+  border-top: whitesmoke 1px solid;
+}
+.contact-box {
+  width: 100%;
+  margin-top: 150px;
+  color: rgba(0,0,0,0);
+}
+.contact-box img {
+  height: 150px;
+  width: 150px;
+}
+.contact-box img:hover {
+  border-radius: 20%;
+  -webkit-box-shadow: 1px 0px 12px 9px rgba(204,204,204,.3);
+  background: rgba(204,204,204,.3);
+}
+.contact-box a { 
+  text-decoration: none; 
+  color: rgba(0,0,0,0);
+  width: 50%;
+}
+.contact-box a:hover { text-decoration: none; color: dimgrey;}
+.contact-box p {
+  font-size: 50px;
+  margin-left: 30px;
+  text-decoration: none;
+}
+.contact-div {
+  margin-top: 10px;
+  text-align: center;
+  width: 50%;
+  height: 300px;
+  float: left;
+}
+.connect {
+  background: url('../images/pixel_weave.png')
+}

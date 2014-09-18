@@ -1,0 +1,10 @@
+{
+  "name": "portfolio",
+  "dependencies": {
+    "angular": "latest",
+    "jquery": "latest",
+    "handlebars": "latest",
+    "angular-sanitize": "~1.2.23",
+    "angular-route": "~1.2.23"
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolioApp">
+<head>
+  <meta charset="UTF-8">
+  <title>McKenneth Scott III</title>
+  <link rel="stylesheet" href="public/styles/reset.css">
+  <link rel="stylesheet" href="public/styles/style.css">
+  <link rel="stylesheet" href="public/styles/projects.css">
+  <script src='public/vendor/bower_components/jquery/dist/jquery.js'></script>
+  <script src='public/vendor/bower_components/handlebars/handlebars.js'></script>
+  <script src='public/vendor/bower_components/angular/angular.js'></script>
+  <script src="public/vendor/bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="public/vendor/bower_components/angular-route/angular-route.js"></script>
+</head>
+<body ng-controller='PortfolioCtrl' ng-class="page.substring(1)">
+  <header>
+    <nav>
+      <a href='#home' class='nav1' ng-click='page="/home"'>Home</a>
+      <a href='#projects' class='nav2' ng-click='page="/projects"'>Projects</a>
+      <a href='#connect' class='nav3' ng-click='page="/connect"'>Connect</a>
+    </nav>
+  </header>
+  <section id='content' ng-switch on='page'>
+  <!-- Home -->
+    <div class='main' ng-switch-when='/home'>
+      <p class="firstName"><span class='mck'>McK</span>enneth</p>
+      <p class="lastName">Scott</p>
+      <p class="suffix">III</p>
+      <span>Developer | Instructor | Aspiring Space Captain</span>
+    </div>
+  <!-- Projects -->
+    <div ng-switch-when='/projects'>
+      <div ng-repeat='project in projects'>
+        <!-- <div class='overlay'> -->
+          <div class='image'>
+            <div class='info'>
+              <div class='wrapper'>
+              <h1>{{project.name}}</h1>
+              <h3>{{project.blurb}}</h3>
+              <br>
+              <ul><h5>Technologies</h5><li ng-repeat='tech in project.technologies'>{{tech}}</li></ul>
+              <br>
+              <ul><h5>Link Love</h5><li ng-repeat='link in project.links'>{{link}}</li></ul>
+              </div>
+            </div>
+            <img src="{{project.image}}" alt="">
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  <!-- Contact -->
+    <div class='contact-box' ng-switch-when='/connect'>
+      <div class='contact-div github'>
+        <a href="https://github.com/DrRobotmck" target='_blank'>
+          <img src="http://newmerator.github.io/blacktocat.png" alt=""><p>DrRobotmck</p>
+        </a>
+      </div>
+      <div class='contact-div linkedin'>
+        <a href="" target='_blank'>
+          <img src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/512/Linkedin-icon.png" alt="">
+          <p>in/mckennethscott</p>
+        </a>
+      </div>
+      <div class='contact-div twitter'>
+        <a href="" target='_blank'>
+          <img src="http://www.iconsdb.com/icons/preview/black/twitter-xxl.png" alt="">
+          <p>@mac_adocious</p>
+        </a>
+      </div>
+      <div class='contact-div ga'>
+        <a href="https://generalassemb.ly/education/web-development-immersive" target='_blank'>
+          <img src="http://codinghouse.co/images/general-assembly.png" alt="">
+          <p>GA WDI</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>Designed somewhere in Brooklyn. &copy;DrRobotmck</p>
+  </footer>
+  <script src='public/js/app.js'></script>
+  <!-- 
+  ========================================================
+  This pattern is downloaded from www.subtlepatterns.com 
+  If you need more, that's where to get'em.
+  ========================================================
+  -->
+</body>
+</html>
